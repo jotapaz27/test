@@ -1,0 +1,50 @@
+run-name: build
+
+on:
+
+  workflow_dispatch:
+    inputs:
+        comment:
+            type: string
+            default: alpha
+            description: Aditional comment (environment,release,sprint)
+            required: true
+      
+jobs:
+
+  build:
+    strategy:
+      matrix:
+        os: [ ubuntu-latest]
+        node-version: [ 20.x ]
+          
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+
+
+      - name: Install Node Modules
+        run: npm i
+
+      - name: Run report
+        if : always()       
+        run: npm run test:playwright
+        
+      
+      - name: Deploy report page
+        if: always()
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+           github_token: ${{ secrets.GITHUB_TOKEN }}
+           publish_branch: gh-pages
+           destination_dir: /report 
+           publish_dir: ./playwright-report
+           user_name: 'github-actions[bot]'
+           user_email: 'github-actions[bot]@users.noreply.github.com'
+
+
+    
