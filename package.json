@@ -28,32 +28,11 @@
     "mocha": "^10.7.3",
     "nodemon": "^3.1.4",
     "prettier": "^3.3.3",
-    "sqlite3": "^5.1.7",
-    "@types/node": "^18.19.50",
-    "@typescript-eslint/eslint-plugin": "^7.18.0",
-    "@typescript-eslint/parser": "^7.18.0",
-    "eslint-plugin-import": "^2.30.0",
-    "eslint-plugin-simple-import-sort": "^12.1.1",
-    "eslint-plugin-unicorn": "^52.0.0",
-    "eslint-plugin-unused-imports": "^3.2.0",
-    "http-server": "^14.1.1",
-    "mkdirp": "^3.0.1",
-    "npm-failsafe": "^1.2.1",
-    "rimraf": "^5.0.10",
-    "ts-node": "^10.9.2",
-    "typescript": "^5.5.4"
+    "sqlite3": "^5.1.7"
   },
   "dependencies": {
     "express": "^4.19.2",
     "playwright": "^1.47.0",
-    "supertest": "^7.0.0",
-    "@cucumber/cucumber": "^10.9.0",
-    "@serenity-js/assertions": "^3.26.1",
-    "@serenity-js/console-reporter": "^3.26.1",
-    "@serenity-js/core": "^3.26.1",
-    "@serenity-js/cucumber": "^3.26.1",
-    "@serenity-js/rest": "^3.26.1",
-    "@serenity-js/serenity-bdd": "^3.26.1",
-    "tiny-types": "^1.23.0"
+    "supertest": "^7.0.0"
   }
 }

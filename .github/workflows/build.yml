@@ -28,7 +28,7 @@ jobs:
 
 
       - name: Install Node Modules
-        run: npm i
+        run: npm i --legacy-peer-deps
 
       - name: Run report
         if : always()       
