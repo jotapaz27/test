@@ -7,7 +7,7 @@ on:
         comment:
             type: string
             default: alpha
-            description: Aditional comment (environment,release,sprint)
+            description: comment
             required: true
       
 jobs:
@@ -41,7 +41,7 @@ jobs:
         with:
            github_token: ${{ secrets.GITHUB_TOKEN }}
            publish_branch: gh-pages
-           destination_dir: /report 
+           destination_dir: / 
            publish_dir: ./playwright-report
            user_name: 'github-actions[bot]'
            user_email: 'github-actions[bot]@users.noreply.github.com'
