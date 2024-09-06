@@ -1,1 +1,7 @@
+# Node
 node_modules
+*.log
+
+# Build artifacts
+.DS_Store
+package-lock.json
